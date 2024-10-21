@@ -1,11 +1,7 @@
 'use client';
 
 import {Radar} from 'react-chartjs-2';
-<<<<<<< HEAD
 import {TooltipItem} from "chart.js";
-
-=======
->>>>>>> 229b8c220907a29de90191c1965c7812957a8ca9
 import {
     Chart as ChartJS,
     ArcElement,
@@ -69,7 +65,6 @@ export default function Home() {
             legend: {
                 display: false,
             },
-<<<<<<< HEAD
             tooltip: {
                 callbacks: {
                     label: function (tooltip: TooltipItem<'radar'>) {
@@ -80,8 +75,6 @@ export default function Home() {
                 usePointStyle: false,
                 displayColors: false,
             },
-=======
->>>>>>> 229b8c220907a29de90191c1965c7812957a8ca9
         },
     };
 

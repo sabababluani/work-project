@@ -25,19 +25,19 @@ const Css = () => {
                 <div className={styles.container}>
                     <div
                         className={`${styles.card1} ${styles.card}`}
-                        onClick={() => handleCardClick('/monster.jpg')} // Corrected path
+                        onClick={() => handleCardClick('/monster.jpg')}
                     ></div>
                     <div
                         className={`${styles.card2} ${styles.card}`}
-                        onClick={() => handleCardClick('/movie2.jpg')} // Corrected path
+                        onClick={() => handleCardClick('/movie2.jpg')} 
                     ></div>
                     <div
                         className={`${styles.card3} ${styles.card}`}
-                        onClick={() => handleCardClick('/avangers.jpg')} // Corrected path
+                        onClick={() => handleCardClick('/avangers.jpg')}
                     ></div>
                     <div
                         className={`${styles.card4} ${styles.card}`}
-                        onClick={() => handleCardClick('/movie1.jpg')} // Corrected path
+                        onClick={() => handleCardClick('/movie1.jpg')}
                     ></div>
                 </div>
             </div>
