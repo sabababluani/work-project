@@ -3,6 +3,8 @@
 import {useState} from 'react';
 import styles from './css.module.scss';
 import CardSection from "@/app/components/CardSection/CardSection";
+import Image from "next/image";
+
 
 const Css = () => {
     const [wrapperBackground, setWrapperBackground] = useState<string>("black.jpg");
@@ -19,7 +21,7 @@ const Css = () => {
                     backgroundImage: wrapperBackground ? `url(${wrapperBackground})` : 'none',
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
-                    backgroundPosition: "center"
+                    backgroundPosition: "center",
                 }}
             >
                 <div className={styles.container}>
@@ -29,7 +31,7 @@ const Css = () => {
                     ></div>
                     <div
                         className={`${styles.card2} ${styles.card}`}
-                        onClick={() => handleCardClick('/movie2.jpg')} 
+                        onClick={() => handleCardClick('/movie2.jpg')}
                     ></div>
                     <div
                         className={`${styles.card3} ${styles.card}`}
@@ -41,7 +43,12 @@ const Css = () => {
                     ></div>
                 </div>
             </div>
-            <CardSection/>
+            <div className={styles.cardContainer}>
+                <CardSection/>
+            </div>
+            <div className={styles.starContainer}>
+                <Image src={'/star.png'} alt={'starr'} width={500} height={500}/>
+            </div>
         </div>
     );
 };
