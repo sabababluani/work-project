@@ -17,26 +17,33 @@
 .card {
   flex: 1;
   height: 100%;
-  transition: flex 0.5s ease;
+  transition: flex 0.5s ease, opacity 0.5s ease;
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: var(--delay);
 }
 
 .card1 {
   background-image: url("../../public/monster.jpg");
+  --delay: 0.6s;
 }
 
 .card2 {
   background-image: url("../../public/movie2.jpg");
+  --delay: 0.6s;
 }
 
 .card3 {
   background-image: url("../../public/avangers.jpg");
+  --delay: 0.6s;
 }
 
 .card4 {
   background-image: url("../../public/movie1.jpg");
+  --delay: 0.6s;
 }
 
 .card:hover {
@@ -80,5 +87,16 @@
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

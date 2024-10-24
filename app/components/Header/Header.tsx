@@ -8,7 +8,7 @@ import Link from "next/link";
 const Header = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    const [isHovered, setIsHovered] = useState(false); // New hover state
+    const [isHovered, setIsHovered] = useState(false);
 
     const controlHeader = () => {
         if (typeof window !== 'undefined') {
@@ -32,6 +32,7 @@ const Header = () => {
 
     return (
         <div className={`${styles.mainWrapper} ${isVisible ? '' : styles.hidden}`}>
+            <div className={styles.test}></div>
             <header className={styles.wrapper}>
                 <Image src={'/meorelogo.png'} alt={'logo'} width={60} height={70}/>
                 <div className={styles.container}>
@@ -54,7 +55,7 @@ const Header = () => {
                 </div>
             </header>
             <div
-                className={`${styles.absoluteWrapper} ${isHovered ? styles.isVisible : ''}`}
+                className={`${styles.absoluteWrapper} ${!isHovered ? styles.isVisible : ''}`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >

@@ -3,7 +3,8 @@
 import {useState} from 'react';
 import styles from './css.module.scss';
 import CardSection from "@/app/components/CardSection/CardSection";
-import Image from "next/image";
+import MessageBox from "@/app/components/MessageBox/Message";
+import MovieBackground from "@/app/components/MovieBackground/MovieBackground";
 
 
 const Css = () => {
@@ -46,9 +47,8 @@ const Css = () => {
             <div className={styles.cardContainer}>
                 <CardSection/>
             </div>
-            <div className={styles.starContainer}>
-                <Image src={'/star.png'} alt={'starr'} width={500} height={500}/>
-            </div>
+            <MessageBox />
+            <MovieBackground />
         </div>
     );
 };
