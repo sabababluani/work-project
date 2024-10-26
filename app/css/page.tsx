@@ -47,8 +47,8 @@ const Css = () => {
             <div className={styles.cardContainer}>
                 <CardSection/>
             </div>
-            <MessageBox />
-            <MovieBackground />
+            <MessageBox/>
+            <MovieBackground/>
         </div>
     );
 };

@@ -56,7 +56,7 @@
 .absoluteWrapper {
   position: fixed;
   top: 50px;
-  height: 350px; /* Default height when visible */
+  height: 350px;
   background-color: #27211b;
   max-width: 1264px;
   width: 100%;
@@ -67,13 +67,13 @@
   gap: 12px;
   opacity: 1;
   z-index: 100;
-  transition: height 0.3s ease, opacity 0.3s ease; /* Transition for height and opacity */
+  transition: height 0.3s ease, opacity 0.3s ease;
 }
 
 .isVisible {
-  height: 0; /* Set to 0 to hide */
-  opacity: 0; /* Fade out */
-  overflow: hidden; /* Prevent content from showing */
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 

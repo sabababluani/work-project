@@ -37,6 +37,7 @@
   transform: translateY(50px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   pointer-events: none;
+  z-index: 100;
 }
 
 .wrapper:active {
