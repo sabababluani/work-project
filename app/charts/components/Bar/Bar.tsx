@@ -54,7 +54,7 @@ const BarChart = () => {
                 display: false,
             },
             tooltip: {
-                enabled : false,
+                enabled: true,
                 callbacks: {
                     label: function (tooltip: TooltipItem<'bar'>) {
                         const dataValue = tooltip.raw;

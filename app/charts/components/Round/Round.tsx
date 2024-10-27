@@ -44,7 +44,7 @@ const RoundChart = () => {
         },
         rotation: 225,
         circumference: 270,
-        cutout: '85%',
+        cutout: '90%',
         responsive: true,
         maintainAspectRatio: false,
     };
