@@ -1,0 +1,15 @@
+.tableWrapper :global .ant-table th {
+  background: #fff !important;
+}
+
+.tableWrapper :global .ant-table-cell::before {
+  content: none !important;
+}
+
+.tableWrapper {
+  padding: 24px;
+}
+
+.tableWrapper :global .ant-table-cell{
+  padding-left: 24px !important;
+}
