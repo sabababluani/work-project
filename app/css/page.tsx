@@ -6,7 +6,6 @@ import CardSection from "@/app/components/CardSection/CardSection";
 import MessageBox from "@/app/components/MessageBox/Message";
 import MovieBackground from "@/app/components/MovieBackground/MovieBackground";
 
-
 const Css = () => {
     const [wrapperBackground, setWrapperBackground] = useState<string>("black.jpg");
 
