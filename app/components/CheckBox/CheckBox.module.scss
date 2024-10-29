@@ -1,0 +1,39 @@
+.wrapper input[type="checkbox"] {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(119, 115, 115, 0.37);
+  border-radius: .25rem;
+  appearance: none;
+  cursor: pointer;
+}
+
+.wrapper input[type="checkbox"]:checked {
+  background-color: transparent;
+}
+
+.wrapper input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  width: 5px;
+  height: 13px;
+  border: 2px solid transparent;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg) scale(1);
+  color: rgba(162, 0, 255, 1);
+  background-color: transparent;
+}
+
+.wrapper input[type="checkbox"]:checked::before {
+  border-color: rgba(162, 0, 255, 1);
+  animation: checkanim .2s ease;
+}
+
+@keyframes checkanim {
+  from {
+    transform: rotate(45deg) scale(0);
+  }
+}

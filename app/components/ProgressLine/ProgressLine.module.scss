@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 780px;
+  width: 100%;
+  max-height: 435px;
+  height: 100%;
+  background-color: #020203;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.wrapper :global .ant-progress-inner {
+  background-color: white !important;
+}
+
+.wrapper :global .ant-progress-success-bg {
+  background-color: #1890FF !important;
+}
+
+.wrapper :global .ant-progress-text {
+  display: none;
+}

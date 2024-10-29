@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './Circle.module.scss';
-import { Doughnut } from "react-chartjs-2";
+import {Doughnut} from "react-chartjs-2";
 import {TooltipItem} from "chart.js";
 
 const Circle = () => {
@@ -16,8 +16,8 @@ const Circle = () => {
                 data: dataValues,
                 backgroundColor: [
                     'rgba(22, 119, 255, 1)',
-                    'rgba(255, 120, 117, 1)',
-                    'rgba(7, 240, 197, 1)',
+                    'rgb(7,88,152)',
+                    'rgb(4,43,94)',
                     'rgb(232,231,231)'
                 ],
                 borderWidth: 0,
@@ -48,7 +48,7 @@ const Circle = () => {
 
     return (
         <div className={styles.wrapper}>
-            <Doughnut data={data} options={options} />
+            <Doughnut data={data} options={options}/>
             <div className={styles.container}>
                 <p>Total</p>
                 <span>{total}</span>

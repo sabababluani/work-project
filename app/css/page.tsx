@@ -5,6 +5,8 @@ import styles from './css.module.scss';
 import CardSection from "@/app/components/CardSection/CardSection";
 import MessageBox from "@/app/components/MessageBox/Message";
 import MovieBackground from "@/app/components/MovieBackground/MovieBackground";
+import CheckBox from "@/app/components/CheckBox/CheckBox";
+import ProgressLine from "@/app/components/ProgressLine/ProgressLine";
 
 const Css = () => {
     const [wrapperBackground, setWrapperBackground] = useState<string>("black.jpg");
@@ -48,6 +50,10 @@ const Css = () => {
             </div>
             <MessageBox/>
             <MovieBackground/>
+            <div className={styles.checkContainer}>
+                <CheckBox/>
+            </div>
+            <ProgressLine/>
         </div>
     );
 };
