@@ -4,15 +4,17 @@ import styles from './page.module.scss';
 import BarChart from "@/app/charts/components/Bar/Bar";
 import Circle from "@/app/charts/components/Circle/Circle";
 import Bandwidth from "@/app/charts/components/Bandwidth/Bandwidth";
+import ProgressLine from "@/app/components/ProgressLine/ProgressLine";
 
 const Charts = () => {
     return (
         <div className={styles.wrapper}>
-            <LineChart/>
-            <BarChart/>
-            <Circle/>
-            <Bandwidth/>
-            <RoundChart/>
+
+            <LineChart />
+            <BarChart />
+            <Circle />
+            <Bandwidth />
+             <RoundChart/>
         </div>
     )
 }
