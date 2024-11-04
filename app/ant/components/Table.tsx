@@ -58,6 +58,7 @@ const rowSelection: TableProps<DataType>['rowSelection'] = {
 const App: React.FC = () => {
     const [selectionType] = useState<'checkbox'>('checkbox');
 
+
     return (
         <div className={styles.tableWrapper}>
             <BreadCrumbAnt/>

@@ -1,13 +1,14 @@
 import React from 'react';
-import {Flex, Progress, Tooltip} from 'antd';
+import {Flex, Progress} from 'antd';
 import styles from './ProgressLine.module.scss';
 
 const ProgressLine: React.FC = () => (
     <div className={styles.wrapper}>
-        <Flex gap="small" vertical>
-            <Tooltip title="3 done / 3 in progress / 4 to do">
-                <Progress success={{percent: 90}}/>
-            </Tooltip>
+        <Flex gap="small" >
+            <Progress
+                percent={10}
+                strokeColor={{from: '#A200FF', to: '#A200FF'}} // Single color gradient
+            />
         </Flex>
     </div>
 );

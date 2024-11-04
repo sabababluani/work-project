@@ -20,7 +20,7 @@ const RoundChart = () => {
         datasets: [
             {
                 data: [300, 30],
-                backgroundColor: ['#1890FF', '#E9ECF1', '#fff'],
+                backgroundColor: ['#A200FF', '#E9ECF1', '#fff'],
                 borderWidth: 0,
                 spacing: -8,
                 borderRadius: [

@@ -73,7 +73,7 @@ const BarChart = () => {
                 },
                 ticks: {
                     color: '#FFFFFF',
-                }
+                },
             },
             y: {
                 stacked: true,
@@ -95,7 +95,7 @@ const BarChart = () => {
             {
                 label: "Usage",
                 data: [920, 300, 150, 980, 220],
-                backgroundColor: "#1890FF",
+                backgroundColor: "#A200FF",
                 barThickness: barThickness,
             },
             {
@@ -103,9 +103,11 @@ const BarChart = () => {
                 data: [1000, 1000, 1000, 1000, 1000],
                 backgroundColor: "rgba(58,58,62,0.6)",
                 barThickness: barThickness,
+                borderRadius: 8,
             },
         ],
     };
+
 
     return (
         <div className={styles.wrapper}>

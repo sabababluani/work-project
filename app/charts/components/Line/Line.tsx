@@ -25,10 +25,10 @@ const LineChart = () => {
         datasets: [
             {
                 label: 'My First dataset',
-                data: [35, 42, 80, 81, 76, 82, 80, 70, 90, 71, 85, 96],
+                data: [35, 42, 80, 81, 71, 82, 80, 70, 90, 71, 85, 96],
                 fill: false,
                 backgroundColor: '#1890FF',
-                borderColor: '#1890FF',
+                borderColor: '#A200FF',
                 tension: 0.7,
                 pointRadius: 0,
             },

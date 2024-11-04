@@ -1,0 +1,13 @@
+.wrapper :global .ant-tabs-ink-bar {
+  position: absolute;
+  top: 0;
+  background-color: red;
+}
+
+.wrapper :global .ant-tabs-tab-btn {
+  color: red;
+}
+
+.wrapper :global .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: green !important;
+}

@@ -16,7 +16,7 @@ const Circle = () => {
                 data: dataValues,
                 backgroundColor: [
                     'rgba(22, 119, 255, 1)',
-                    'rgb(7,88,152)',
+                    '#A200FF',
                     'rgb(4,43,94)',
                     'rgb(232,231,231)'
                 ],

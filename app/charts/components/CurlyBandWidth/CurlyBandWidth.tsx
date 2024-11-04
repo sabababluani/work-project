@@ -1,6 +1,6 @@
 'use client';
 
-import styles from './Bandwidth.module.scss';
+import styles from './CurlyBandWidth.module.scss';
 import {Line} from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -12,22 +12,24 @@ import {
     Tooltip,
     Legend,
     TooltipItem,
+    Filler,
     ScriptableContext,
     ChartDataset
 } from 'chart.js';
 
-ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend);
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Title, Tooltip, Legend, Filler);
 
-const Bandwidth = () => {
+const CurlyBandwidth = () => {
     const data = {
         labels: [
             'January', 'February', 'March', 'April', 'May', 'June',
             'July', 'August', 'September', 'October', 'November', 'December'
         ],
+
         datasets: [
             {
-                label: 'My First dataset',
-                data: [96, 85, 80, 95, 76, 67, 66, 45, 55, 30, 11, 22],
+                label: '',
+                data: [31, 35, 20, 25, 29, 17, 26, 15, 15, 10, 11, 22],
                 fill: true,
                 backgroundColor: (context: ScriptableContext<'line'>) => {
                     const chart = context.chart;
@@ -39,10 +41,8 @@ const Bandwidth = () => {
                     return gradient;
                 },
                 borderColor: '#A200FF',
-                tension: 0,
-                pointRadius: 3,
-                pointBackgroundColor: '#A200FF',
-                pointBorderColor: '#A200FF',
+                tension: 0.6,
+                pointRadius: 0,
             } as ChartDataset<'line', number[]>,
         ],
     };
@@ -53,6 +53,10 @@ const Bandwidth = () => {
                 display: false,
             },
             tooltip: {
+                backgroundColor: '#fff',
+                titleColor: '#000',
+                bodyColor: '#000',
+                padding: 15,
                 intersect: false,
                 mode: 'index' as const,
                 callbacks: {
@@ -62,7 +66,7 @@ const Bandwidth = () => {
                     },
                 },
                 usePointStyle: false,
-                displayColors: false
+                displayColors: false,
             },
         },
         scales: {
@@ -81,7 +85,7 @@ const Bandwidth = () => {
                 ticks: {
                     color: '#FFFFFF',
                 },
-                max: 120,
+                max: 40,
             },
         },
     };
@@ -93,4 +97,4 @@ const Bandwidth = () => {
     );
 };
 
-export default Bandwidth;
+export default CurlyBandwidth;
