@@ -15,18 +15,12 @@ ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 const RoundChart = () => {
     const data = {
-        labels: [],
-        backgroundColor: '#fff',
+        labels: ['Progress', 'Remaining'],
         datasets: [
             {
                 data: [300, 30],
-                backgroundColor: ['#A200FF', '#E9ECF1', '#fff'],
+                backgroundColor: ['#1890FF', '#E9ECF1'],
                 borderWidth: 0,
-                spacing: -8,
-                borderRadius: [
-                    {outerStart: 10, innerStart: 10, outerEnd: 10, innerEnd: 10},
-                    {outerEnd: 10, innerEnd: 10},
-                ],
             },
         ],
     };

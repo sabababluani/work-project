@@ -8,7 +8,7 @@ import Bandwidth from "@/app/charts/components/Bandwidth/Bandwidth";
 import ProgressLine from "@/app/components/ProgressLine/ProgressLine";
 import CurlyBandwidth from "@/app/charts/components/CurlyBandWidth/CurlyBandWidth";
 import RoundAnt from "@/app/charts/components/RoundAnt/RoundAnt";
-import Loading from '@/app/loading'; // Import your loading component
+import Loading from '@/app/loading';
 
 const Charts = async () => {
     // await new Promise((resolve) => setTimeout(resolve, 2000));

@@ -1,0 +1,45 @@
+.sitesInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.infoButton {
+  padding: 6px 0 8px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 188px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
+}
+
+.infoButtonClicked {
+  background-color: #E4E6E9;
+  border: 1px solid #DCDFE1;
+}
+
+.infoButtonClicked span {
+  color: #11141A !important;
+}
+
+.infoButton span {
+  font-weight: 500;
+  font-size: 14px;
+  color: #545A67;
+}
+
+.placeholder {
+  width: 20px;
+  height: 20px;
+  background-color: #1677FF;
+  border-radius: 4px;
+}
