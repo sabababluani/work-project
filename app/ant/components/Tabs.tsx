@@ -19,7 +19,7 @@ const CustomTabs = () => {
                 <TabPane tab="Tab 4" key="4">
                     Content of Tab 4
                 </TabPane>
-            </Tabs>
+        </Tabs>
         </div>
     )
 }

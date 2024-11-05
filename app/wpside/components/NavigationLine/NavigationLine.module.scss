@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: tearDown 0.8s cubic-bezier(0.25, 0.8, 0.5, 1);
 }
 
 .infoWrapper {
@@ -42,4 +43,15 @@
   height: 20px;
   background-color: #1677FF;
   border-radius: 4px;
+}
+
+@keyframes tearDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

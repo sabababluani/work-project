@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {Table, Button} from 'antd';
+import {Table} from 'antd';
 import type {TableColumnsType, TableProps} from 'antd';
 import styles from './Table.module.scss';
+import Image from 'next/image';
 
 interface DataType {
     key: React.Key;
@@ -12,8 +13,8 @@ interface DataType {
 
 const columns: TableColumnsType<DataType> = [
     {
-        title: 'Plugin',
-        dataIndex: 'plugin',
+        title: 'Name',
+        dataIndex: 'plugin', // updated to match the `plugin` key in `data`
         render: (text: string) => <a>{text}</a>,
     },
     {
@@ -21,31 +22,31 @@ const columns: TableColumnsType<DataType> = [
         dataIndex: 'status',
         render: (status: number) => (
             <div
-                style={{
-                    width: '80px',
-                    height: '30px',
-                    backgroundColor: status === 1 ? 'rgba(246, 255, 237, 1)' : 'rgba(255, 163, 158, 1)',
-                    color: status === 1 ? 'rgba(82, 196, 26, 1)' : 'rgba(245, 34, 45, 1)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '4px',
-                    border: `1px solid ${status === 1 ? 'rgba(183, 235, 143, 1)' : 'rgb(239,50,39)'}`,
-                    cursor: 'pointer',
-                }}
+                className={
+                    status === 1
+                        ? styles.activeStatus
+                        : status === 0
+                            ? styles.inactiveStatus
+                            : ''
+                }
             >
-                {status === 1 ? 'Active' : 'Inactive'}
+                <span
+                    className={
+                        status === 1 ? styles.greenDot : status === 0 ? styles.redDot : ''
+                    }
+                ></span>
+                <span className={styles.status}>
+                    {status === 1 ? 'Active' : 'Disconnected'}
+                </span>
             </div>
         ),
     },
     {
-        title: '',
+        title: 'Action',
         dataIndex: 'address',
-        render: (_: number, row: DataType) => (
-            <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                <Button type="primary" style={{width: '80px', backgroundColor: `${row.status && 'red'}`}}>
-                    {row.status === 1 ? 'Delete' : 'Active'}
-                </Button>
+        render: () => (
+            <div className={styles.dotsWrapper}>
+                <Image src={'/3dots.svg'} alt={'3dots'} width={14} height={16}/>
             </div>
         ),
     },
@@ -54,25 +55,25 @@ const columns: TableColumnsType<DataType> = [
 const data: DataType[] = [
     {
         key: '1',
-        plugin: 'Melancholic',
+        plugin: 'Novatori.ge',
         status: 1,
         address: 2,
     },
     {
         key: '2',
-        plugin: 'Twenty Twenty-Four',
+        plugin: 'Novatori.ge.com',
         status: 0,
         address: 2,
     },
     {
         key: '3',
-        plugin: 'Twenty Twenty-Two',
+        plugin: 'Aid.Novatori.ge',
         status: 0,
         address: 2,
     },
     {
         key: '4',
-        plugin: 'Twenty Twenty-Three',
+        plugin: 'Novagame.ge',
         status: 1,
         address: 2,
     },
@@ -89,13 +90,6 @@ const rowSelection: TableProps<DataType>['rowSelection'] = {
 
 const ThemeTable: React.FC = () => {
     const [selectionType] = useState<'checkbox'>('checkbox');
-
-    // const handleUpdate = (key: React.Key) => {
-    //     console.log(`Update action for key: ${key}`);
-    // };
-    // const handleToggleStatus = (key: React.Key) => {
-    //     console.log(`Toggle status action for key: ${key}`);
-    // };
 
     return (
         <div className={styles.tableWrapper}>

@@ -5,11 +5,7 @@ import styles from './css.module.scss';
 import CardSection from "@/app/components/CardSection/CardSection";
 import MessageBox from "@/app/components/MessageBox/Message";
 import MovieBackground from "@/app/components/MovieBackground/MovieBackground";
-<<<<<<< HEAD
 import CheckBox from "@/app/components/CheckBox/CheckBox";
-=======
-
->>>>>>> cbe3c25c771eff663f1d7db0569fcc9c06db638b
 
 const Css = () => {
     const [wrapperBackground, setWrapperBackground] = useState<string>("black.jpg");
@@ -53,12 +49,9 @@ const Css = () => {
             </div>
             <MessageBox/>
             <MovieBackground/>
-<<<<<<< HEAD
             <div className={styles.checkContainer}>
                 <CheckBox/>
             </div>
-=======
->>>>>>> cbe3c25c771eff663f1d7db0569fcc9c06db638b
         </div>
     );
 };
